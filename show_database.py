@@ -3,7 +3,7 @@ from dbConnection import DatabaseConnection
 dbConnection = DatabaseConnection()
 resultData = dbConnection.getAllData()
 
-print ("{:<5} {:<15}\n".format('PK', 'Date and Time'))
+print ("{:<15} {:<20}\n".format('Primary Key', 'Date and Time'))
 
 for dbEntry in resultData:
-    print("{:<5} {:<15}".format(dbEntry[0], dbEntry[1]))
+    print("{:<15} {:<20}".format(dbEntry[0], str(dbEntry[1])))

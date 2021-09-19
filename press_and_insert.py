@@ -1,6 +1,7 @@
 import keyboard
 from dbConnection import DatabaseConnection
 from datetime import datetime
+import time
 
 dbConnection = DatabaseConnection()
 
@@ -21,5 +22,7 @@ while True:
             print(f'{keyPressed} key pressed at {dateTimeNow} and saved at the database.\n')
 
             dbConnection.insertDateTime(dateTime=dateTimeNow)
+
+            time.sleep(1)
     except:
         print('Invalid Key')

@@ -11,6 +11,8 @@ class DatabaseConnection:
 
         self.dbCursor = self.dbConnection.cursor()
 
+        self.dbCursor.execute('CREATE TABLE IF NOT EXISTS session ( primary_key int(100) NOT NULL AUTO_INCREMENT, date_time_pressed datetime(6) NOT NULL, PRIMARY KEY (primary_key))')
+
 
     def insertDateTime(self, **kwargs):
         dateTimeNow = kwargs['dateTime']
